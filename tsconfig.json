@@ -1,0 +1,9 @@
+{
+  "include": ["src/"], //change to match your project
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "typings"
+  }
+}

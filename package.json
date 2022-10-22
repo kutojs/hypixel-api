@@ -1,0 +1,52 @@
+{
+  "name": "hypixel-api",
+  "version": "1.3.7",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "jest --verbose ./test",
+    "test:coverage": "npm test -- --coverage",
+    "test:badges": "npm run test:coverage && jest-coverage-badges",
+    "typings": "npx jsdoc -t node_modules/tsd-jsdoc/dist -r src -d ./typings"
+  },
+  "types": "./typings/types.d.ts",
+  "author": "kuto",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "node-cache": "^5.1.2",
+    "prismarine-nbt": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "better-docs": "^2.3.2",
+    "jest": "^26.6.3",
+    "jest-coverage-badges": "^1.1.2",
+    "jsdoc": "^3.6.6",
+    "tsd-jsdoc": "^2.5.0"
+  },
+  "repository": {
+    "type": "",
+    "url": "https://github.com/kutojs/hypixel-api"
+  },
+  "jest": {
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
+  },
+  "exports": {
+    ".": [
+      {
+        "require": "./src/index.js",
+        "import": "./src/index.mjs"
+      },
+      "./src/index.js"
+    ],
+    "./esm": "./src/index.mjs"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
